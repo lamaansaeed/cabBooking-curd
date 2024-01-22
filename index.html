@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="margin: 0">
+    <h3>Book Your Bus</h3>
+    
+<br>
+    <form id="userForm" onsubmit="handleFormSubmit(event)">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" autocomplete="off" />
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" autocomplete="off" />
+        <br>
+        <br>
+        <label for="phone">Phone No</label>
+        <input type="tel" name="phone" id="phone" autocomplete="off" />
+        <br>
+        <br>
+        <select id="category">
+          <option>Bus1</option>
+          <option>Bus2</option>
+          <option>Bus3</option>
+        </select>
+        <button type="submit">Book</button>
+    </form>   
+    <label for="filterCategory">Filter by Bus:</label>
+<select id="filterCategory">
+  <option value="">All</option>
+  <option value="Bus1">Bus 1</option>
+  <option value="Bus2">Bus 2</option>
+  <option value="Bus3">Bus 3</option>
+</select>
+<button onclick="filterList()">Filter</button> 
+    <ul id="listofitems"></ul>
+  </body>
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"></script>
+</html>
